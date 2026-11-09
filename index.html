@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kusina ni Lola - Food Order</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <span class="logo">Kusina ni Lola</span>
+  <div class="links">
+    <a href="#home">Home</a><a href="#menu">Menu</a><a href="#order">Order Now</a><a href="#place">Place Order</a>
+  </div>
+</nav>
+
+<!-- SLIDE 1: BACKGROUND -->
+<section id="home" class="slide hero">
+  <div class="hero-text">
+    <h1>Home-cooked food,<br>delivered hot.</h1>
+    <p>Pick your dishes and desserts, and we bring them to your door.</p>
+    <a class="btn" href="#menu">See the menu</a>
+  </div>
+</section>
+
+<!-- SLIDE 2: MENU -->
+<section id="menu" class="slide">
+  <h2>Our Menu</h2>
+  <div class="menu-grid">
+    <div>
+      <h3>Dishes</h3>
+      <ul class="menu-list" id="dishList"></ul>
+    </div>
+    <div>
+      <h3>Desserts</h3>
+      <ul class="menu-list" id="dessertList"></ul>
+    </div>
+  </div>
+  <a class="btn" href="#order">Order now</a>
+</section>
+
+<!-- SLIDE 3: ORDER NOW -->
+<section id="order" class="slide alt">
+  <h2>Order Now</h2>
+  <p class="hint">Tap + or - to choose how many of each.</p>
+  <div class="order-grid" id="orderGrid"></div>
+  <div class="bar">
+    <strong>Total: <span id="total">₱0</span></strong>
+    <a class="btn" href="#place">Continue</a>
+  </div>
+</section>
+
+<!-- SLIDE 4: PLACE ORDER -->
+<section id="place" class="slide">
+  <h2>Place Order</h2>
+  <div class="place-grid">
+    <div class="summary">
+      <h3>Your order</h3>
+      <ul id="summaryList"><li class="empty">Nothing selected yet. Go back to Order Now.</li></ul>
+      <p class="sum-total">Total: <span id="total2">₱0</span></p>
+    </div>
+    <form id="orderForm">
+      <label>Name<input type="text" id="name" required></label>
+      <label>Address<input type="text" id="address" required></label>
+      <label>Phone<input type="tel" id="phone" required></label>
+      <button class="btn" type="submit">Place order</button>
+      <p id="msg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
